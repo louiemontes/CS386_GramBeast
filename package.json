@@ -1,0 +1,19 @@
+{
+  "name": "grambeast",
+  "version": "1.0.0",
+  "description": "CS386 Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louiemontes/CS386_GramBeast.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/louiemontes/CS386_GramBeast/issues"
+  },
+  "homepage": "https://github.com/louiemontes/CS386_GramBeast#readme"
+}
