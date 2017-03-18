@@ -1,6 +1,6 @@
-(function {
+(function() {
   // input our firebase instance
-  var config = {
+  const config = {
     apiKey: "AIzaSyC0iaIzgFDpfpwxbR_ZaeEk-4ezaAO8l-o",
     authDomain: "grambeast.firebaseapp.com",
     databaseURL: "https://grambeast.firebaseio.com",
@@ -10,25 +10,26 @@
   firebase.initializeApp(config);
 
   // retrieve client elements
-  var txtEmail = document.getElementById("txtEmail");
-  var txtPassword = document.getElementById("txtPassword");
-  var btnLogin = document.getElementById("btnLogin");
-  var btnSignup = document.getElementById("btnSignup");
-  var btnSignout = document.getElementById("btnSignout");
+  const txtEmail = document.getElementById("txtEmail");
+  const txtPassword = document.getElementById("txtPassword");
+  const btnLogin = document.getElementById("btnLogin");
+  const btnSignUp = document.getElementById("btnSignUp");
+  const btnLogout = document.getElementById("btnLogout");
 
   // add event listeners
   btnLogin.addEventListener("click", e => {
-    // get email and pass 
-    var email = txtEmail.value;
-    var pass = txtPassword.value;
+    // get email and pass
+    const email = txtEmail.value;
+    const pass = txtPassword.value;
     const auth = firebase.auth();
 
     // actual sign in
     const promise = auth.signInWithEmailAndPassword(email, pass);
-    promise.catch(e => console.log(e.message));
+    promise
+      .catch(e => console.log(e.message));
   });
 
-  btnSignup.addEventListener("click", e => {
+  btnSignUp.addEventListener("click", e => {
     // get email and pass
     // TODO: Check for proper email and password input, this automatically accepts anything until fixed.
     var email = txtEmail.value;
@@ -37,22 +38,21 @@
 
     // actual sign up
     const promise = auth.createUserWithEmailAndPassword(email, pass);
-    promise.catch(e => console.log(e.message));
+    promise
+      .catch(e => console.log(e.message));
   });
 
-  btnLogout.addEvenListener("click", e => {
+  btnLogout.addEventListener("click", e => {
     firebase.auth().signOut();
   });
 
   // add realtime listener
   firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser){
-      console.log(firebaseUser);
-      btn.Logout.classList.remove("hide");
+      btn.Logout.classList.add("visibility");
+      console.log("Login successful. Welcome:");
     } else {
       console.log("User not logged in");
-      btn.Logout.classList.add("hide");
     }
-  })
+  });
 }());
-
