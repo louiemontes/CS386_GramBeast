@@ -1,41 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>GramBeast</title>
-    <link type="text/css" rel="stylesheet" href="../styles.css"/>
+    <title>Instructor Signup</title>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js">
+  </script>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-
-    <div id="message">
-      <h1>Sign up as an instructor</h1>
-
-      <ul>
-        <li>First name: <input type="text" name="firstname" value="Juan"></li>
-        <li>Last name: <input type="text" name="lastname" value="Gonzales"></li>
-        <br>
-        <li>Email: <input type="text" name="email"></li>
-        <li>Username: <input type="text" name="username"></li>
-        <li>Password: <input type="text" name="password"></li>
-        <li>Retype-password: <input type="text" name="retypePassword"></li>
-        <br>
-        <li>Univeristy or School: <input type="text" name="retypePassword" value="NAU"></li>
-        <br>
-        <li>Languages sought to contribute to and which level:</li>
-        <li><input type="checkbox" name="language" value="DoesNotWantReponse">Spanish</li>
-        <li><input type="radio" name="langLevel" value="beginner"> Beginner</li>
-        <li><input type="radio" name="langLevel" value="intermediate"> Intermediate</li>
-        <li><input type="radio" name="langLevel" value="fluent"> Fluent</li>
-        <br>
-        <li><input type="button" onClick="history.go(0)" value="Submit"></li>
-      </ul>
-      <p style="text-align: center">Already have an account?</p>
-      <ul>
-        <li><a target="_blank" href="../login.html">Log In</a></li>
-      </ul><br>
-      <ul>
-        <li><a target="_blank" href="../index.html">Back To Home</a></li>
-      </ul><br>
+    <div class="message">
+      <input id="txtEmail" type="email" placeholder="email">
+      <input id="txtPassword" type="password" placeholder="password">
+      <button id="btnLogin" class="btn btn-action">Login</button>
+      <button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
+      <button id="btnLogout" class="btn btn-action hide" style="display:none">Logout</button>
     </div>
-  </body>
+    <script src="app.js"></script>
+      </body>
 </html>
