@@ -18,7 +18,11 @@
           echo "<form action='phpInteractivity/login.php' method='POST'>";
           echo "<input type='text' name='uid' placeholder='Username'><br>";
           echo "<input type='password' name='pwd' placeholder='Password'><br>";
-          echo "<button type='submit'>LOGIN</button>";
+          echo "<br><input type='radio' id='accountTypeInstructor' name='accountType' value='instructor'> Instructor";
+          echo "<br><input type='radio' id='accountTypeStudent' name='accountType' value='student'> Student<br>";
+          echo "<br><br><button type='submit'>LOGIN</button>";
+          echo "<button><a href='student/studentSignup.php'>Make Student</a></button>";
+          echo "<button><a href='instructor/instructorSignup.php'>Make Instructor</a></button>";
           echo "</form>";
         } else {
         echo "Welcome ";
@@ -30,11 +34,6 @@
         echo "</form>";
         }
       ?>
-      <p style="text-align: center">Already have an account?</p>
-      <ul>
-        <li><a target="_blank" href="login">Login</a></li>
-
-      </ul>
     </div>
   </body>
 </html>
